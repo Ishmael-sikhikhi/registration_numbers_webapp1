@@ -1,0 +1,113 @@
+body{
+    width: 100%;
+    color: black;
+    background-color: rgb(162, 201, 129);
+}
+h1{
+    background-color: rgb(201, 113, 162);
+    text-align: center;
+    width: 100%;
+}
+.error{
+    color: crimson;
+}
+.butt button{
+    margin-left: 5%;
+    width: 130px;
+    padding: 5px 5px 5px 5px;
+    border-radius: 10px;
+    border: solid #000;
+    background-color: #aaa9ad;
+    color: #000;
+    font-size: large;
+    font-weight: bolder;
+    /* margin-top: 2%; */
+}
+.drop-down{
+    margin-top: 5%;
+    font-weight: bold;
+}
+.notification{
+    color: rgb(21, 78, 14);
+}
+.ins{
+    color: rgb(7, 7, 7);
+}
+#myEle{
+    width: fit-content;
+
+}
+#myEle button{
+    border-radius: 10px;
+    border: solid #000;
+    background-color: #aaa9ad;
+    width: 110PX;
+    padding: 5px 5px 5px 5px;
+    margin-top: 1%;
+    
+} 
+.regCol{
+    color: blue;
+}
+.box{
+    text-align: center;
+}
+.box input{
+    padding: 10px 10px;    
+}
+.radio-buttons input{
+    margin-top: 2%;
+    margin-left: 10%;
+}
+.radio-buttons{
+    margin-left: 20%;
+}
+.sel{
+    text-align: center;
+    color: rgb(254, 254, 255);
+    font-style: italic;
+    font-weight: bolder;
+    font-stretch: expanded;
+    font-size-adjust: inherit;
+}
+.butt{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.container{
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%; 
+}
+@media (max-width:761){
+    .radio-buttons{
+        display: block;
+        width: 20%;
+    }
+}
+.regNumberInput{
+    width: 220px;
+}
+.regNumber h4, .regNumber h5{
+    color: rgb(7, 7, 7);    
+}
+@media (max-width: 450px){
+    .butt{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        justify-content: space-between;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+}
+
+@media (max-width:150px){
+    .container{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+}
