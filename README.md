@@ -1,0 +1,1 @@
+[![Build Status](https://app.travis-ci.com/Ishmael-sikhikhi/registration_numbers_webapp.svg?branch=main)](https://app.travis-ci.com/Ishmael-sikhikhi/registration_numbers_webapp)
