@@ -7,8 +7,8 @@ env:
   - DATABASE_URL=postgresql://postgres@localhost:5432/registration-test
 
 before_script:
-  - psql -c 'create database  greet_tests;' -U postgres
-  - psql -U postgres -d greet_tests -a -f tables.sql
+  - psql -c 'create database  registration-test;' -U postgres
+  - psql -U postgres -d registration-test -a -f tables.sql
 
 services:
   - postgresql
