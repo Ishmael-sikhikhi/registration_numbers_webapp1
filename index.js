@@ -58,7 +58,6 @@ app.get("/", registrationRoute.homeRoute);
 app.post('/reg_numbers', registrationRoute.addRegNumber);
 app.get('/list', registrationRoute.allRegNumbers);
 app.get('/reset',registrationRoute.reset);
-// app.post('/', registrationRoute.towns)
 
 const PORT = process.env.PORT || 3001
 
