@@ -9,7 +9,8 @@ const connectionString = process.env.DATABASE_URL || 'postgresql://codex:pg123@l
 
 const pool = new Pool({
     connectionString
-});
+});  
+
 
 beforeEach(async function () {
     // clean the tables before each test run
