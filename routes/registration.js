@@ -22,7 +22,6 @@ module.exports = function (registrationService) {
             regList,
             town
         })
-
     };
 
     async function addRegNumber(req, res) {
