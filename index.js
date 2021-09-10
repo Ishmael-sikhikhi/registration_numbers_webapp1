@@ -32,7 +32,6 @@ const registrationService = RegistrationService(pool);
 
 const registrationRoute = Registration(registrationService);
 
-
 const { request } = require('express');
 const flash = require('express-flash');
 const session = require('express-session');
