@@ -7,29 +7,30 @@ module.exports = function (registrationService) {
     let Count = 0;
     let regNum = ''
     let regList = []
+    var town = ''
 
     // regax
     const regType1 = /^((CA|CJ|CL)\s([0-9]){5})$/
     const regType2 = /^((CA|CL|CJ)\s\d{3}\s\d{3})$/
     const regType3 = /^((CA|CL|CJ)\s\d{3}\-\d{3})$/
 
-    async function start(req, res) {
+    async function homeRoute(req, res) {
         regList = await registrationService.getRegList()
         
-        console.log(regList)
         res.render('index', {
             regNum,
-            regList
+            regList,
+            town
         })
 
     };
 
-    async function add(req, res) {
+    async function addRegNumber(req, res) {
         try {
             regNum = req.body.regNumber
 
-            if (!regNum){
-                req.flash('error', 'Enter name and select a registration number')
+            if (regNum ===''){
+                req.flash('error', 'Enter registration number')
             }
 
             else if (regNum) {
@@ -37,7 +38,6 @@ module.exports = function (registrationService) {
                     registration: regNum
                 })               
             }
-
         }
         catch (err) {
             console.error('Error occured on greet!', err)
@@ -46,38 +46,29 @@ module.exports = function (registrationService) {
         return res.redirect('/');
     };
 
-    async function all(req, res) {
+    async function allRegNumbers(req, res) {
         regList = await registrationService.getRegList()
-        res.redirect('index',{
+        res.render('index',{
             regList
-        });
-        console.log(regList);
-         
+        });         
     };
-    async function times(req, res) {
-        // const selectedName = req.params.name;
-        // counter = await registrationService.howManyTimesEachName(selectedName)
-
-        // console.log(registrationService.howManyTimesEachName(selectedName))
-        // res.render('greeted-times', {
-        //     selectedName,
-        //     counter
-        // })
-    };
-    async function resetDB(req, res) {
-        await registrationService.deletes()
+    
+    async function reset(req, res) {
+        await registrationService.resetDB()
          req.flash('info', 'Database has successfully resetted!')
-         message = ''
-        return res.redirect('/');
+        return res.render('index')
     };
 
-
-    return {
-        add,
-        start,
-        all,
-        times,
-        resetDB
+    async function towns(req, res){
+        town = await registrationService.filterFunction('CA')
+        console.log(town)
     }
 
+    return {
+        addRegNumber,
+        homeRoute,
+        allRegNumbers,
+        reset,
+        towns
+    }
 }

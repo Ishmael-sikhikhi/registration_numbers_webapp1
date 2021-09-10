@@ -1,15 +1,19 @@
 body{
     width: 100%;
     color: black;
-    background-color: rgb(162, 201, 129);
+    background-color: rgb(185, 252, 130);
 }
 h1{
     background-color: rgb(201, 113, 162);
     text-align: center;
     width: 100%;
+    color: #fff;
 }
 .error{
     color: crimson;
+}
+.info{
+    color: green;
 }
 .butt button{
     margin-left: 5%;
@@ -17,7 +21,7 @@ h1{
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
     border: solid #000;
-    background-color: #aaa9ad;
+    background-color: #E0E0E0;
     color: #000;
     font-size: large;
     font-weight: bolder;
@@ -28,7 +32,7 @@ h1{
     font-weight: bold;
 }
 .notification{
-    color: rgb(21, 78, 14);
+    color: green;
 }
 .ins{
     color: rgb(7, 7, 7);
@@ -38,9 +42,9 @@ h1{
 
 }
 #myEle button{
-    border-radius: 10px;
+    border-radius: 8px;
     border: solid #000;
-    background-color: #aaa9ad;
+    background-color: #E0E0E0;
     width: 110PX;
     padding: 5px 5px 5px 5px;
     margin-top: 1%;
@@ -80,6 +84,9 @@ h1{
     width: 60%;
     margin-left: 20%;
     margin-right: 20%; 
+}
+.resetBt{
+    margin-left: 5px;
 }
 @media (max-width:761){
     .radio-buttons{

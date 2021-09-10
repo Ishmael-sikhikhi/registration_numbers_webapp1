@@ -54,9 +54,11 @@ app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 app.use(express.static('public'));
 
-app.get("/", registrationRoute.start);
-app.post('/reg_numbers', registrationRoute.add);
-app.get('list', registrationRoute.all);
+app.get("/", registrationRoute.homeRoute);
+app.post('/reg_numbers', registrationRoute.addRegNumber);
+app.get('/list', registrationRoute.allRegNumbers);
+app.get('/reset',registrationRoute.reset);
+// app.post('/', registrationRoute.towns)
 
 const PORT = process.env.PORT || 3001
 
