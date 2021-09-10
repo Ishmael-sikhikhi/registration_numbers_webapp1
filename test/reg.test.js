@@ -11,7 +11,6 @@ const pool = new Pool({
     connectionString
 });  
 
-
 beforeEach(async function () {
     // clean the tables before each test run
     await pool.query("delete from users;");
