@@ -11,4 +11,6 @@ create table regNum (
 	foreign key (town_id) references towns(id)
 );
 
-alter table towns add constraint uniq_desc_constraint unique(town_str);
+insert into towns (town_name, town_str) values ('Stellenbosch','CL');
+insert into towns (town_name, town_str) values ('Paarl','CJ');
+insert into towns (town_name, town_str) values ('Cape Town','CA');
