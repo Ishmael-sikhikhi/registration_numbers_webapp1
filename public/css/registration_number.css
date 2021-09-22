@@ -1,7 +1,7 @@
 body{
     width: 100%;
     color: black;
-    background-color: rgb(185, 252, 130);
+    background-color: #F3E9D2;
 }
 h1{
     background-color: rgb(201, 113, 162);
@@ -15,8 +15,10 @@ h1{
 .info{
     color: green;
 }
+.rb{
+    margin-top: 2%;
+}
 .butt button{
-    margin-left: 5%;
     width: 130px;
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
@@ -25,9 +27,9 @@ h1{
     color: #000;
     font-size: large;
     font-weight: bolder;
-    /* margin-top: 2%; */
 }
 .drop-down{
+    padding: 25px;
     margin-top: 5%;
     font-weight: bold;
 }
@@ -50,6 +52,10 @@ h1{
     margin-top: 1%;
     
 } 
+#myEle{
+    margin-left: 3%;
+    margin-right: 3%;
+}
 .regCol{
     color: blue;
 }
@@ -77,8 +83,8 @@ h1{
 .butt{
     display: flex;
     justify-content: space-between;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 5%;
+    margin-right:5%;
 }
 .container{
     width: 60%;

@@ -56,7 +56,8 @@ app.use(express.static('public'));
 app.get("/", registrationRoute.homeRoute);
 app.post('/reg_numbers', registrationRoute.addRegNumber);
 app.get('/list', registrationRoute.allRegNumbers);
-app.get('/reset',registrationRoute.reset);
+app.post('/town_reg', registrationRoute.townRegNumbers);
+app.get('/reset',registrationRoute.reset); 
 
 const PORT = process.env.PORT || 3001
 

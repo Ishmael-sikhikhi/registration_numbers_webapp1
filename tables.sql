@@ -1,13 +1,14 @@
 create table towns(
-town_id text not null primary key,
-town_name text not null
+id serial primary key not null,
+town_name varchar(20) not null,
+town_str text not null
 );
 
 create table regNum (
 	id serial not null primary key,
 	reg_num text not null,
-	town_id char(2),
-	foreign key (town_id) references towns(town_id)
+	town_id int,
+	foreign key (town_id) references towns(id)
 );
 
-alter table towns add constraint uniq_desc_constraint unique(town_name);
+alter table towns add constraint uniq_desc_constraint unique(town_str);
