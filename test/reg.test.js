@@ -5,7 +5,7 @@ const Pool = pg.Pool;
 
 
 // we are using a special test database for the tests
-const connectionString = process.env.DATABASE_URL || 'postgresql://codex:pg123@localhost:5432/regnum-test';
+const connectionString = process.env.DATABASE_URL || 'postgresql://codex:pg123@localhost:5432/regnum_tests';
 
 const pool = new Pool({
     connectionString

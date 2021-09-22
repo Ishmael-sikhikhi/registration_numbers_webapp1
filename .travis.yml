@@ -4,11 +4,11 @@ node_js:
   - "12"
   
 env:
-  - DATABASE_URL=postgresql://postgres@localhost:5432/regnum-test
+  - DATABASE_URL=postgresql://postgres@localhost:5432/regnum_tests
 
 before_script:
-  - psql -c 'create database  regnum-test;' -U postgres
-  - psql -U postgres -d regnum-test -a -f tables.sql
+  - psql -c 'create database  regnum_tests;' -U postgres
+  - psql -U postgres -d regnum_tests -a -f tables.sql
 
 services:
   - postgresql
