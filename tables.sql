@@ -13,4 +13,4 @@ create table regNum (
 
 insert into towns (town_name, town_str) values ('Stellenbosch','CL');
 insert into towns (town_name, town_str) values ('Paarl','CJ');
-insert into towns (town_name, town_str) values ('Cape Town','CA');
+insert into towns (town_name, town_str) values ('Cape Town','CA'); 
