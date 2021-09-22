@@ -2,6 +2,7 @@
   "name": "registration_numbers_webapp",
   "version": "1.0.0",
   "main": "index.js",
+  "description": "[![Build Status](https://app.travis-ci.com/Ishmael-sikhikhi/registration_numbers_webapp.svg?branch=main)](https://app.travis-ci.com/Ishmael-sikhikhi/registration_numbers_webapp)",
   "directories": {
     "npm test": "test"
   },
@@ -22,8 +23,19 @@
     "start": "node index.js",
     "dev": "nodemon index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ishmael-sikhikhi/registration_numbers_webapp"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "bugs": {
+    "url": "https://github.com/Ishmael-sikhikhi/registration_numbers_webapp/issues"
+  },
+  "homepage": "https://github.com/Ishmael-sikhikhi/registration_numbers_webapp#readme",
+  "devDependencies": {
+    "mocha": "^9.0.3",
+    "nodemon": "^2.0.12"
+  }
 }
