@@ -4,9 +4,8 @@ document.addEventListener('DOMContentLoaded', function () {
     if (infoElem.innerHTML !== '' || errorMessageElem.innerHTML !== '') {
         setTimeout(() => {
             infoElem.innerHTML = '';
-            errorMessageElem.innerHTML = '';            
+            errorMessageElem.innerHTML = '';    
             
         }, 3000);
     }
-
 });
