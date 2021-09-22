@@ -8,8 +8,7 @@ module.exports =function registrations(pool) {
     var reg = ''
     var str = ''
     var theReg = ''
-    async function setReg(num) {
-        
+    async function setReg(num) {        
         reg = num.registration
         theReg = reg.charAt(0).toUpperCase() + reg.charAt(1).toUpperCase() + reg.slice(2)
         
