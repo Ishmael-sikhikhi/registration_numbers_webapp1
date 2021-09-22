@@ -2,6 +2,9 @@
   "name": "registration_numbers_webapp",
   "version": "1.0.0",
   "main": "index.js",
+  "directories": {
+    "npm test": "test"
+  },
   "dependencies": {
     "body-parser": "^1.19.0",
     "chalk": "^4.1.2",
