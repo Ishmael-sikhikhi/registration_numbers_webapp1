@@ -23,7 +23,7 @@ h1{
     padding: 5px 5px 5px 5px;
     border-radius: 10px;
     border: solid #000;
-    background-color: #f7ff58;
+    background-color: #E0E0E0;
     color: #000;
     font-size: large;
     font-weight: bolder;
@@ -46,7 +46,7 @@ h1{
 #myEle button{
     border-radius: 8px;
     border: solid #000;
-    background-color: #f7ff58;
+    background-color: #E0E0E0;
     width: 110PX;
     padding: 5px 5px 5px 5px;
     margin-top: 1%;
