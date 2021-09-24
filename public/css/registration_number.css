@@ -39,18 +39,14 @@ h1{
 .ins{
     color: rgb(7, 7, 7);
 }
-#myEle{
-    width: fit-content;
-
-}
+/*  */
 #myEle button{
     border-radius: 8px;
     border: solid #000;
     background-color: #E0E0E0;
     width: 110PX;
     padding: 5px 5px 5px 5px;
-    margin-top: 1%;
-    
+    margin-top: 1%;    
 } 
 #myEle{
     margin-left: 3%;
@@ -81,8 +77,6 @@ h1{
     font-size-adjust: inherit;
 }
 .butt{
-    display: flex;
-    justify-content: space-around;
     margin-left: 10%;
     margin-right:10%;
 }
@@ -94,24 +88,44 @@ h1{
 .resetBt{
     margin-left: 5px;
 }
-@media (max-width:761){
-    .radio-buttons{
-        display: block;
-        width: 20%;
-    }
-}
+
 .regNumberInput{
     width: 220px;
 }
 .regNumber h4, .regNumber h5{
     color: rgb(7, 7, 7);    
 }
-@media (max-width: 450px){
+
+@media (min-width: 992px) {
     .butt{
-        display: block;
-        width: 90%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+@media (max-width:768px){
+    .container{
+        width: 80%;
         margin-left: 10%;
         margin-right: 10%;
+    }
+    
+    .container{
+        width: 80%;
+        margin-left: 10%;
+        margin-right: 10%; 
+    }
+    .butt{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 450px){
+    .radio-buttons{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
     }
 }
 
