@@ -21,8 +21,6 @@ module.exports =function registrations(pool) {
                 }
             }          
         } 
-
-        return getRegList()
     }; 
 
     async function forTown(num) {
