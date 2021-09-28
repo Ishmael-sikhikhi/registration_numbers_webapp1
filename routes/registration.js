@@ -40,9 +40,7 @@ module.exports = function (registrationService) {
                     regList = await registrationService.setReg({
                         registration: regNum
                     })
-
-                    console.log(1200)
-
+                    
                 }
 
                 else if (!regType1.test(regNum) || !regType2.test(regNum) || !regType3.test(regNum)) {
