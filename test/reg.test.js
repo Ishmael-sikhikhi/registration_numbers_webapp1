@@ -118,7 +118,7 @@ describe('Registration number exercise', async () => {
             });
 
             await registration.setReg({ registration: "CA 123 456" })
-            await registration.setReg({ registration: "CL 123 456" })
+            await registration.setReg({ registration: "CL 123 456" }) 
             assert.deepEqual([{ "reg_num": 'CA 123 456' }, { "reg_num": 'CL 123 456' }], await registration.getRegList())
         })
     })
