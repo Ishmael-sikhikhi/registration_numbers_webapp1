@@ -1,4 +1,5 @@
 'use strick'
+const { Pool } = require('pg');
 const RegistrationService = require('../services/registration-services');
 
 module.exports = function (registrationService) {
@@ -26,14 +27,27 @@ module.exports = function (registrationService) {
         try {
             regNum = req.body.regNumber
             regNum = regNum.charAt(0).toUpperCase() + regNum.charAt(1).toUpperCase() + regNum.slice(2)
-
-            if (regType1.test(regNum) || regType2.test(regNum) || regType3.test(regNum)) {
-                regList = await registrationService.setReg({
-                    registration: regNum
-                })
+            regList = await registrationService.getRegList();
+            if (regList.includes(regNum) === true) {
+                req.flash('error', "Registration number already exists!");
+                console.log(1100);
             }
-            else if (!regType1.test(regNum) || !regType2.test(regNum) || !regType3.test(regNum)) {
-                req.flash('error', "Please registration number start with CA/ CL or CJ as example showed on the screen")
+        
+            
+            if (regList.includes(regNum) === false) {
+                if (regType1.test(regNum) || regType2.test(regNum) || regType3.test(regNum)) {
+
+                    regList = await registrationService.setReg({
+                        registration: regNum
+                    })
+
+                    console.log(1200)
+
+                }
+
+                else if (!regType1.test(regNum) || !regType2.test(regNum) || !regType3.test(regNum)) {
+                    req.flash('error', "Please registration number start with CA/ CL or CJ as example showed on the screen")
+                }
             }
         }
         catch (err) {
