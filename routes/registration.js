@@ -28,9 +28,8 @@ module.exports = function (registrationService) {
             regNum = req.body.regNumber
             regNum = regNum.charAt(0).toUpperCase() + regNum.charAt(1).toUpperCase() + regNum.slice(2)
             regList = await registrationService.getRegList();
-            if (regList.includes(regNum) === true) {
+            if (regList[0].reg_num === regNum) {
                 req.flash('error', "Registration number already exists!");
-                console.log(1100);
             }
         
             
@@ -40,7 +39,6 @@ module.exports = function (registrationService) {
                     regList = await registrationService.setReg({
                         registration: regNum
                     })
-                    
                 }
 
                 else if (!regType1.test(regNum) || !regType2.test(regNum) || !regType3.test(regNum)) {
